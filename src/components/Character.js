@@ -14,7 +14,7 @@ const Container = styled.div`
     }
 
     p:hover {
-        font-family: 'Courier New', Courier, monospace;
+        font-family: 'Pacifico';
         font-weight: bold;
         font-size: x-large;
     }
