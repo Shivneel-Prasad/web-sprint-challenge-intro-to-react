@@ -3,7 +3,21 @@ import './App.css';
 import axios from 'axios';
 import { PEOPLE_BASE_URL } from './Contants/index'
 import Character from './components/Character';
+import styled from 'styled-components';
 
+const Design = styled.div`
+  font-family: 'Chilanka', cursive;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .Header:hover {
+    color: indigo;
+    font-weight: bold;
+    background-color: lavender;
+  }
+`
 
 const App = () => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -27,10 +41,10 @@ const App = () => {
   }, [])
 
   return (
-    <div className="App">
+    <Design className="App">
       <h1 className="Header">Star Wars Characters</h1>
       <Character data={characters} />
-    </div>
+    </Design>
   );
 }
 

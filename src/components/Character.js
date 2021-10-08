@@ -1,11 +1,30 @@
 // Write your Character component here
 import React from 'react'
+import styled from 'styled-components'
+
+const Container = styled.div`
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    h1:hover {
+        color: indigo;
+        background-color: lavender;
+    }
+
+    p:hover {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: x-large;
+    }
+`
 
 export default function Character(props) {
     const { data } = props
 
     return (
-        <div>
+        <Container>
           {data.map((roles, idx) => {
             return (
                 <div key={idx} >
@@ -20,6 +39,6 @@ export default function Character(props) {
                 </div>
               )
           })}
-        </div>
+        </Container>
     )
 }
